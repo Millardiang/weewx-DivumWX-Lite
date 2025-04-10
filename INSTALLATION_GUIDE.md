@@ -16,11 +16,94 @@ If you are carrying out a fresh install of WeeWX, my own personal preference is 
 
 IMPORTANT. Installing PHP; please make sure you install all the PHP modules appropriate for your version of PHP. Failure to due so may mean that forecasts and current conditions fail to update. This is an example for PHP8.0 modules on a Debian based distribution: -
 
-	sudo apt install php8.1
-	sudo apt install php8.1-cli php8.1-fpm php8.1-sqlite3 php8.1-zip php8.1-gd  php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
-	sudo apt install libapache2-mod-php8.1
-	sudo a2enmod php8.1
-	sudo systemctl restart apache2
+	<p>This tutorial shows how to install PHP 8.4 on Raspberry Pi.</p>
+
+<h2 class="wp-block-heading">Install PHP</h2>
+
+<p>Connect to Raspberry Pi via SSH and execute command to download GPG key:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo wget -qO /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg</code></pre>
+
+<p>Add PHP repository:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php.list</code></pre>
+
+<p>Update the package lists:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt update</code></pre>
+
+<p>Next, install PHP 8.4 with command line interface (CLI):</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y php8.4-common php8.4-cli</code></pre>
+
+<p>Check PHP version when installation was finished:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">php --version</code></pre>
+
+<p>There are various PHP extensions that provide additional functionality. PHP extensions can be installed using the following syntax:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y php8.4-extension_name</code></pre>
+
+<p> Execute the following command to install commonly used PHP extensions:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y php8.4-curl php8.4-gd php8.4-mbstring php8.4-xml php8.4-zip</code></pre>
+
+<p>We can use <code>-m</code> option to check what extensions are installed.</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">php -m</code></pre>
+
+<h2 class="wp-block-heading">PHP integration with MySQL or MariaDB</h2>
+
+<p>To use PHP with MySQL or MariaDB database, we need to install the following extension:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y php8.4-mysql</code></pre>
+
+<h2 class="wp-block-heading">PHP integration with Apache</h2>
+
+<p>If we want to integrate PHP with Apache HTTP server, then install the following extension:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y libapache2-mod-php8.4</code></pre>
+
+<p>Once installation was completed, restart Apache:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo service apache2 restart</code></pre>
+
+<h2 class="wp-block-heading">Testing PHP</h2>
+
+<p>Create a new <code>main.php</code> file:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">nano main.php</code></pre>
+
+<p>Add the following code:</p>
+
+<pre class="highlighter"><code class="language-php">&lt;?php
+
+echo 'Hello world';</code></pre>
+
+<p>Run the following command to test a script:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">php main.php</code></pre>
+
+<h2 class="wp-block-heading">Uninstall PHP</h2>
+
+<p>If you want to completely remove PHP anything related to it, execute the following command:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt purge --autoremove -y php-common mime-support</code></pre>
+
+<p>Remove GPG key and repository:</p>
+
+<pre class="highlighter code-block-no-margin"><code class="language-plaintext no-line-numbers">sudo rm -rf /etc/apt/trusted.gpg.d/php.gpg</code></pre>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo rm -rf /etc/apt/sources.list.d/php.list</code></pre>
+
+<p>Remove PHP related file:</p>
+
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo rm -rf /var/lib/systemd/timers/stamp-phpsessionclean.timer</code></pre>
+
+<h2 class="wp-block-heading">Install older versions</h2>
+
+<p>PHP 8.3 is an older version that is still supported. It can be installed by changing <code>php8.4</code> to <code>php8.3</code> in this post presented commands.</p></div>
+    
 
 * Install Ephem (https://rhodesmill.org/pyephem/). It is important that you install the latest version as versions prior to 4.1.3 are missing crucial libraries in the install package. It is also important that any previous versions are removed before hand. From the command line (if your version of Python is 2.x, use pip2 and python2 instead): -
 
