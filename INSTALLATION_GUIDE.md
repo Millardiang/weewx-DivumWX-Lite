@@ -98,8 +98,8 @@ echo 'Hello world';</code></pre>
 		unzip weewx-DivumWX-Lite-master.zip
 		cd weewx-DivumWX-Lite-master
 		sudo python3 w34_installer.py
-		
-		    Follow the prompts
+
+* Follow the prompts
 		
 
 
@@ -112,21 +112,7 @@ echo 'Hello world';</code></pre>
 
 This will allow some of the required variable data to be generated immediately without having to wait for the next report generation interval.
 
-* You can now test that the template is working by opening it up in your browser. Initially you will see random demo data. Click on the menu button at the top-left corner and select settings. This will open up a web form in which you apply your own settings. The default password is '12345'. Please change this to your own unique password for your own protection. Pay particular attention to the location of the w34realtime.txt file being generated on a loop cycle by weeWX. The default location is “/[html_root]/weewx/w34weather/serverdata/w34realtime.txt” (for example /var/www/html/weewx/w34weather/serverdata/w34realtime.txt). IMPORTANT the unit codes that you select for the Weather Underground and DarkSky forecast APIs must be identical to those that you select in the pre-install settings process. Failure to do so will possibly produce some bizzare data.
-
-* Using a RAM Disk for w34realtime.txt. The default location is hard-coded but can be changed: -
-
-	Edit the [Weather34Realtime] stanza in weewx.conf
-
-			[Weather34RealTime]
-    
-    				realtime_path_only = /[your path to your ram disk] # no trailing /
-
-        Edit line 33 in weather34/settings.php
-    				
-				$livedata = "/[your path to ram disk]/w34realtime.txt";
-
-  These edited settings may not be persistent after an update / re-install so you may need to re-edit the above files.
+* You can now test that the template is working by opening it up in your browser. Initially you will see random demo data. Click on the menu button at the top-left corner and select settings. This will open up a web form in which you apply your own settings. The default password is '12345'. Please change this to your own unique password for your own protection. Pay particular attention to the location of the dvmRealtime.txt file being generated on a loop cycle by weeWX. The default location is “/[html_root]/divumLite/serverdata/dvmRealtime.txt” (for example /var/www/html/divumLite/serverdata/dvmRealtime.txt).
 
 * Automatic database backup module. 
 
@@ -151,5 +137,3 @@ This will allow some of the required variable data to be generated immediately w
 * Save and restart WeeWX
 
 * Any problems, please raise an Issue in this repository attaching a debug report (see here for details http://www.weewx.com/docs/utilities.htm#wee_debug_utility), your skin.conf files and a syslog tail report covering at least two archive cycles from startup.
-
-* There is further guide of how to install weewx_Weather34 on a remote server here: - https://github.com/steepleian/weewx-Weather34/blob/main/REMOTE_SERVER.md and an excellent online guide by User Chris Alemany at https://www.chrisalemany.ca/2021/02/24/installing-the-weather34-skin-on-weewx-with-remote-web-server-2021-edition/
