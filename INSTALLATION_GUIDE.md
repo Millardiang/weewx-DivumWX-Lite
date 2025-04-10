@@ -82,8 +82,6 @@ echo 'Hello world';</code></pre>
 
 <pre class="highlighter"><code class="language-plaintext no-line-numbers">php main.php</code></pre>
 
-<h2 class="wp-block-heading">Uninstall PHP</h2>
-
 <h2 class="wp-block-heading">Install older versions</h2>
 
 <p>PHP 8.3 is an older version that is still supported. It can be installed by changing <code>php8.4</code> to <code>php8.3</code> in this post presented commands.</p></div>
