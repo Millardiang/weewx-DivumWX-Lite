@@ -4,7 +4,7 @@
 Language Translation File for HOMEWEATHERSTATION Template
 Language: English
 Translated by: <Your Name Here>
-Developed By: Lightmaster/Brian Underdown/Erik M Madsen
+Developed By: Lightmaster//Erik M Madsen
 October/November 2016
 Revised: 2019
 -----------------
@@ -35,7 +35,7 @@ $lang['Toggle']                  = 'Toggle Fullscreen ';
 $lang['Contactinfo']             = 'Station & Contact Info';
 $lang['Templateinfo']            = 'Template Info';
 $lang['language']                = 'Select Language';
-$lang['Weatherstationinfo']      = 'Weather Station Info';
+$lang['Weatherstationinfo']      = 'divum Station Info';
 $lang['Webdesigninfo']           = 'Template Info';
 $lang['Contact']                 = 'Contact';
 //days
@@ -166,6 +166,8 @@ $lang['Flooding']                = 'Flooding Possible';
 $lang['Rainbow']                 = 'Rainbow';
 $lang['Windy']                   = 'Windy';
 //sun -moon-daylight-darkness
+$lang['Rise']                    = 'Rise';
+$lang['CelestialData']           = 'Celestial Data';
 $lang['Sun']                     = 'Sun';
 $lang['Moon']                    = 'Moon';
 $lang['Sunrise']                 = 'Sun Rise';
@@ -176,7 +178,7 @@ $lang['Night']                   = 'Night ';
 $lang['Day']                     = 'Day';
 $lang['Nextnewmoon']             = 'Next New Moon';
 $lang['Nextfullmoon']            = 'Next Full Moon';
-$lang['Luminance']               = 'Luminance';
+$lang['Illumination']            = 'Illumination';
 $lang['Moonphase']               = 'Moonphase';
 $lang['Estimated']               = 'Estimated';
 $lang['Daylight']                = 'Daylight';
@@ -205,6 +207,16 @@ $lang['Rising']                  = 'Rising';
 $lang['Steady']                  = 'Steady';
 $lang['Rapidly']                 = 'Rapidly';
 $lang['Temp']                    = 'Temp';
+$lang['RISING_VERY_RAPIDLY']     = 'Rising Very Rapidly';
+$lang['RISING_QUICKLY']          = 'Rising Quickly';
+$lang['RISING']                  = 'Rising';
+$lang['RISING_SLOWLY']           = 'Rising Slowly';
+$lang['STEADY']                  = 'Steady';
+$lang['FALLING_SLOWLY']          = 'Falling Slowly';
+$lang['FALLING']                 = 'Falling';
+$lang['FALLING_QUICKLY']         = 'Falling Quickly';
+$lang['FALLING_VERY_RAPIDLY']    = 'Falling Very Rapidly';
+
 //Solar-UV
 //uv
 $lang['Nocaution']               = 'No <color>caution</color> required';
@@ -224,7 +236,7 @@ $lang['Currentsky']              = 'Current Conditions';
 $lang['Currently']               = 'Currently';
 $lang['Cloudcover']              = 'Cloud Cover';
 //Notifications
-$lang['Nocurrentalert']          = 'No Current Weather <span>Alerts</span>';
+$lang['Nocurrentalert']          = 'No Current divum <span>Alerts</span>';
 $lang['Windalert']               = 'Wind Gusts at';
 $lang['Tempalert']               = 'High Temperature';
 $lang['Heatindexalert']          = 'Heat Index Warning';
@@ -258,7 +270,7 @@ $lang['Hourlyforecast']          = 'Hourly Forecast ';
 $lang['Significantearthquake']   = 'Significant Earthquake';
 $lang['Regionalearthquake']      = 'Regional Earthquake';
 $lang['Average']                 = 'Average';
-$lang['Notifications']           = 'Weather <span>Alert</span>';
+$lang['Notifications']           = 'divum <span>Alert</span>';
 $lang['Indoor']                  = 'Indoor';
 $lang['Today']                   = 'Today';
 $lang['Tonight']                 = 'Tonight';
@@ -272,7 +284,7 @@ $lang['Nometeor']                = 'No Meteor Showers';
 $lang['LiveWebCam']              = 'Live Web Cam';
 $lang['Online']                  = 'Online';
 $lang['Offline']                 = 'Offline';
-$lang['Weatherstation']          = 'Weather Station';
+$lang['Weatherstation']          = 'divum Station';
 $lang['Cloudbase']               = 'Cloudbase';
 $lang['uvalert']                 = 'Caution High UVINDEX';
 $lang['Max']                     = 'Max';
@@ -298,6 +310,7 @@ $lang['Unhealthy']               = 'Unhealthy Air Quality';
 $lang['UnhealthyFS']             = 'Unhealthy For Some';
 $lang['Moderate']                = 'Moderate Air Quality ';
 $lang['Good']                    = 'Good Air Quality ';
+
 #notification additions
 $lang['notifyTitle']             = 'Notifications';
 $lang['notifyAlert']             = "Alert";
@@ -314,5 +327,37 @@ $lang['notifyHighWindWarning']   = "High Wind Warning";
 $lang['notifySustainedAvg']      = "Sustained avg";
 $lang['notifyWindAdvisory']      = "Wind Advisory";
 $lang['notifyFreezing']          = "Below Freezing";
+//Top Row Modules
+$lang['timeTop']                 = 'Station Time';
+$lang['airQualityTop']           = 'Air Quality Current PM<sub>2.5</sub> Concentration';
+$lang['lightningTop']            = 'Lightning Strikes';
+$lang['advisories']              = 'Advisories and Alerts';
+$lang['TemperatureTop']          = 'Annual Temperature High | Low';
+$lang['RainfallTop']             = 'Month | Year Rainfall Totals';
+$lang['WindTop']                 = 'Month | Year Maximum Wind Speed';
 
+//Main Modules
+$lang['temperatureModule']       = 'Temperature';
+$lang['forecastModule']          = 'Forecast';
+$lang['currentModule']           = 'Current Conditions';
+$lang['actualModule']            = 'Summary of Actual Conditions';
+$lang['windModule']              = 'Wind Speed | Direction';
+$lang['barometerModule']         = 'Barometer';
+$lang['solarDialModule']         = 'Solar Dial';
+$lang['rainfallModule']          = 'Rainfall';
+$lang['solarUvLuxModule']        = 'Solar | UVI | Illuminance';
+$lang['solarUvPVModule']         = 'Solar | UVI | PV Generation';
+$lang['powerGridBatPanelModule'] = 'Power Usage Snapshot';
+$lang['lightningModule']         = 'Lightning';
+$lang['airqualityModule']        = 'Air Quality (AQI)';
+$lang['webcamModule']            = 'Weather Camera';
+$lang['earthDaylightModule']     = 'Earth Daylight';
+$lang['moonPhaseModule']         = 'Current Moonphase';
+$lang['earthquakeModule']        = 'Earthquake';
+$lang['indoorTempModule']        = 'Inside Conditions';
+$lang['Anemometer']              = 'Anemometer';
+$lang['PollenModule']            = 'Current Pollen Risk';
+$lang['greenhouseGasModule']     = 'Greenhouse Gases Concentrations';
+$lang['weather_live']            = 'Live Weather Conditions';
+$lang['clockModule']             = 'Outlook';
 ?>

@@ -4,7 +4,7 @@
 Language Translation File for HOMEWEATHERSTATION Template
 Language: Italian
 Translated by: Antonio Angelotti - meteopomarico.it - 23.04.2017
-Developed By: Lightmaster/Brian Underdown/Erik M Madsen
+Developed By: Lightmaster//Erik M Madsen
 October/November 2016
 Revised: 2019
 -----------------
@@ -287,7 +287,7 @@ $lang['Nometeor'] = 'Nessun Sciame meteorico';
 $lang['LiveWebCam'] = 'WebCam';
 $lang['Online'] = 'Online';
 $lang['Offline'] = 'Offline';
-$lang['Weatherstation'] = 'Weather Station';
+$lang['Weatherstation'] = 'divum Station';
 $lang['Cloudbase'] = 'Cloudbase';
 $lang['uvalert'] = 'Caution High UVINDEX';
 $lang['Max'] = 'Max';
@@ -329,4 +329,20 @@ $lang['notifyHighWindWarning'] = "High Wind Warning";
 $lang['notifySustainedAvg'] = "Sustained avg";
 $lang['notifyWindAdvisory'] = "Wind Advisory";
 $lang['notifyFreezing'] = "Below Freezing";
+//Main Modules
+$lang['temperatureModule']       = 'Temperature';
+$lang['forecastModule']          = 'Forecast';
+$lang['currentModule']           = 'Current Conditions';
+$lang['windModule']              = 'Wind Speed | Direction';
+$lang['barometerModule']         = 'Barometer';
+$lang['solarDialModule']         = 'Solar Dial';
+$lang['rainfallModule']          = 'Rainfall';
+$lang['solarUvLuxModule']        = 'Solar | UVI | Lux';
+$lang['lightningModule']         = 'Lightning';
+$lang['airqualityModule']        = 'Air Quality | AQI';
+$lang['webcamModule']            = 'divum Camera';
+$lang['earthDaylightModule']     = 'Earth Daylight';
+$lang['moonPhaseModule']         = 'Current Moonphase';
+$lang['earthquakeModule']        = 'Earthquake';
+$lang['indoorTempModule']        = 'Inside Conditions';
 ?>

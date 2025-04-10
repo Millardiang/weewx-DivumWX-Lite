@@ -1,4 +1,19 @@
 <?php
+##############################################################################################
+#        ________   __  ___      ___  ____  ____  ___      ___    __   __  ___  ___  ___     #
+#       |"      "\ |" \|"  \    /"  |("  _||_ " ||"  \    /"  |  |"  |/  \|  "||"  \/"  |    #
+#       (.  ___  :)||  |\   \  //  / |   (  ) : | \   \  //   |  |'  /    \:  | \   \  /     #
+#       |: \   ) |||:  | \\  \/. ./  (:  |  | . ) /\\  \/.    |  |: /'        |  \\  \/      #
+#       (| (___\ |||.  |  \.    //    \\ \__/ // |: \.        |   \//  /\'    |  /\.  \      #
+#       |:       :)/\  |\  \\   /     /\\ __ //\ |.  \    /:  |   /   /  \\   | /  \   \     #
+#       (________/(__\_|_)  \__/     (__________)|___|\__/|___|  |___/    \___||___/\___|    #
+#                                                                                            #
+#     Copyright (C) 2023 Ian Millard, Steven Sheeley, Sean Balfour. All rights reserved      #
+#      Distributed under terms of the GPLv3.  See the file LICENSE.txt for your rights.      #
+#    Issues for weewx-divumwx skin template are only addressed via the issues register at    #
+#                    https://github.com/Millardiang/weewx-divumwx/issues                     #
+##############################################################################################
+
 function find_variable($strings, $str, $rstr){
     for ($x = 0; $x < count($strings); $x++) {
        $parts = explode("=", $strings[$x]);
@@ -16,7 +31,7 @@ function find_variable($strings, $str, $rstr){
     return "";
 }
 $pos = '$'.$_GET['pos'];
-$filetext = file('settings1.php');
+$filetext = file('userSettings.php');
 $positions = find_variable($filetext, $pos.'s', '');
 $positiontitles = find_variable($filetext, $pos.'titles', '');
 $currenttitle = find_variable($filetext, $pos.'title', '');
@@ -28,7 +43,7 @@ if (strlen($positions) > 0 and strlen($positiontitles) > 0) {
             $x = ($x + 1) % count($titles); 
             $strings = find_variable(find_variable($filetext, $pos, $urls[$x]), $pos.'title', $titles[$x]);
             if (count($strings) > 0)
-                file_put_contents('settings1.php',$strings,LOCK_EX);
+                file_put_contents('userSettings.php',$strings,LOCK_EX);
             sleep(3);
             break;
         }
