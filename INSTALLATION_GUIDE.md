@@ -16,8 +16,6 @@ If you are carrying out a fresh install of WeeWX, my own personal preference is 
 
 IMPORTANT. Installing PHP; please make sure you install all the PHP modules appropriate for your version of PHP. Failure to due so may mean that forecasts and current conditions fail to update. This is an example for PHP8.0 modules on a Debian based distribution: -
 
-	<p>This tutorial shows how to install PHP 8.4 on Raspberry Pi.</p>
-
 <h2 class="wp-block-heading">Install PHP</h2>
 
 <p>Connect to Raspberry Pi via SSH and execute command to download GPG key:</p>
@@ -85,20 +83,6 @@ echo 'Hello world';</code></pre>
 <pre class="highlighter"><code class="language-plaintext no-line-numbers">php main.php</code></pre>
 
 <h2 class="wp-block-heading">Uninstall PHP</h2>
-
-<p>If you want to completely remove PHP anything related to it, execute the following command:</p>
-
-<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt purge --autoremove -y php-common mime-support</code></pre>
-
-<p>Remove GPG key and repository:</p>
-
-<pre class="highlighter code-block-no-margin"><code class="language-plaintext no-line-numbers">sudo rm -rf /etc/apt/trusted.gpg.d/php.gpg</code></pre>
-
-<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo rm -rf /etc/apt/sources.list.d/php.list</code></pre>
-
-<p>Remove PHP related file:</p>
-
-<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo rm -rf /var/lib/systemd/timers/stamp-phpsessionclean.timer</code></pre>
 
 <h2 class="wp-block-heading">Install older versions</h2>
 
