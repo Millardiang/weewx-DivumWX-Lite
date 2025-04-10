@@ -83,23 +83,13 @@ echo 'Hello world';</code></pre>
 <h2 class="wp-block-heading">Install older versions</h2>
 
 <p>PHP 8.3 is an older version that is still supported. It can be installed by changing <code>php8.4</code> to <code>php8.3</code> in this post presented commands.</p></div>
+
     
+* This install process assumes that your are using one of the officially documented WeeWX installs and a typical Apache2 or Nginx web server configuration with a document root of /var/www/html. In this instance, at the end of the installation process your path to the DivumWX-Lite skin will be /var/www/html/divumLite. If your installation deviates from this, you will need to adjust the paths in your weewx.conf file after the installation process has taken place.
 
-* Install Ephem (https://rhodesmill.org/pyephem/). It is important that you install the latest version as versions prior to 4.1.3 are missing crucial libraries in the install package. It is also important that any previous versions are removed before hand. From the command line (if your version of Python is 2.x, use pip2 and python2 instead): -
+* I am very gratefully to Jerry Dietrich for writing a new installer which has been adapted DivumWX-Lite. This installer copies everything to the correct places and automatically configures the correct web server ownerships, permissions and groups etc. The whole process is very fast and your skin will be up and running in no time.
 
-        sudo pip3 uninstall pyephem
-		sudo apt purge python3-ephem
-		sudo pip3 install ephem
-
-Once completed, make sure you save weewx.conf
-
-* If you have have the CRT extension (Cumulus Real-Time) extension installed, unless you require it for another purpose, you can remove it now. (sudo ./wee_extension --uninstall crt)
-
-* This install process assumes that your are using one of the officially documented WeeWX installs and a typical Apache2 web server configuration of /var/www/html. In this instance, at the end of the installation process your path to thw Weather34 skin will be /var/www/html/weewx/weather34. If your installation deviates from this, you will need to adjust the paths in your weewx.conf file after the installation process has taken place.
-
-* I am very gratefully to Jerry Dietrich for writing a new installer specially for Weather34. This installer copies everything to the correct places and automatically configures the correct web server ownerships, permissions and groups etc. The whole process is very fast and your skin will be up and running in no time. By using the supplied configuration files, setup.py, packaged or MacOS installed versions of WeeWX can be catered for.
-
-* Go to https://steepleian.github.io/weewx-Weather34 to complete the pre-install web services settings which which generates 'services.txt' in your default Download folder. 
+* Go to https://Millardiang.github.io/weewx-DivumWX-Lite to complete the pre-install web services settings which which generates 'services.txt' in your default Download folder. 
 
 * From the command line: - 
                 
