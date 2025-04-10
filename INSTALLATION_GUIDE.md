@@ -93,24 +93,22 @@ echo 'Hello world';</code></pre>
 
 * From the command line: - 
                 
-		Download weewx-Weather34-master.zip from https://github.com/steepleian/weewx-w34rc1/edit/main/ into your Download folder alongside the services.txt file
+		Download weewx-DivumWX-Lite-master.zip from https://github.com/Millardiang/weewx-DivumWX-Lite/archive/refs/heads/main.zip into your Download folder alongside the services.txt file
 		cd [path_to_your_Download_folder]
-		unzip weewx-w34rc1-main.zip
-		cd weewx-w34rc1-main
-		sudo python w34_installer.py or sudo python3 w34_installer.py (if you are running Python3)
+		unzip weewx-DivumWX-Lite-master.zip
+		cd weewx-DivumWX-Lite-master
+		sudo python3 w34_installer.py
 		
-		    You will be prompted for the config file for your WeeWX install type.
-		    Select packaged if your WeeWX was installed by Debian, RedHat or Suse methods [default option]
-		    or
-		    Select setup_py. if your WeeWX was installed by setup.py method
-		    or
-		    Select macos if your WeeWX was installed by MacOS method
+		    Follow the prompts
 		
 
 
 * Restart WeeWX and from command line run: -
             	
-		sudo python3 ./[YOUR OWN PATH TO]/wee_reports
+		# Activate the WeeWX virtual environment
+                source ~/weewx-venv/bin/activate
+                # Run all enabled reports:    
+                weectl report run
 
 This will allow some of the required variable data to be generated immediately without having to wait for the next report generation interval.
 
