@@ -6,11 +6,7 @@ IMPORTANT. If you are making a completley clean install of WeeWX and DivumLite T
 
 This installation guide assumes that you are already reasonably familiar with WeeWX and that it is already installed on your computer along with a webserver, php and curl.
 
-Currently, DivumLite only supports WeeWX 5.1 or later, installed by Pip into a Python virtual environment. Instructions can be found at https://weewx.com/docs/5.1/quickstarts/pip/
-
-If you have not already done so, you must update your WeeWX installation to version 4.6.0 or later. This is required to facillitate nested copying during the skin install process. Follow the various installation type links on this page http://weewx.com/docs/usersguide.htm#installation_methods for instructions on updating. This version of Weather34 is compatible with WeeWX 4.6.0/Python3.x.
-
-If you have not already done so update your WeeWX database to the wview_extended.schema (standard from WeeWX 4 onwards). Follow the directions in the section *Adding a new type to the database* (https://www.weewx.com/docs/customizing.htm#add_archive_type), except skip step #1 and in step #2, specify *schemas.wview_extended.schema* as the schema. 
+Currently, DivumLite only supports WeeWX 5.1 or later, installed by Pip into a Python v3.6 or later virtual environment. Instructions can be found at https://weewx.com/docs/5.1/quickstarts/pip/
 
 If you are carrying out a fresh install of WeeWX, my own personal preference is to use the setup.py method (http://www.weewx.com/docs/setup.htm). However, this increases the chances of requiring more path edits in the configuration files. Alternatively use one of the dedicated packaged installs (http://weewx.com/docs/debian.htm, http://weewx.com/docs/redhat.htm, http://weewx.com/docs/suse.htm or http://weewx.com/docs/macos.htm).
 
