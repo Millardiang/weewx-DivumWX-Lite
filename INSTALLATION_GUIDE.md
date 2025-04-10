@@ -105,10 +105,10 @@ echo 'Hello world';</code></pre>
 
 * Restart WeeWX and from command line run: -
             	
-		# Activate the WeeWX virtual environment
-                source ~/weewx-venv/bin/activate
-                # Run all enabled reports:    
-                weectl report run
+		            # Activate the WeeWX virtual environment
+                            source ~/weewx-venv/bin/activate
+                            # Run all enabled reports:    
+                            weectl report run
 
 This will allow some of the required variable data to be generated immediately without having to wait for the next report generation interval.
 
@@ -136,4 +136,13 @@ This will allow some of the required variable data to be generated immediately w
 				
 * Save and restart WeeWX
 
-* Any problems, please raise an Issue in this repository attaching a debug report (see here for details http://www.weewx.com/docs/utilities.htm#wee_debug_utility), your skin.conf files and a syslog tail report covering at least two archive cycles from startup.
+* Any problems, please raise an Issue in this repository attaching a debug report, your skin.conf files and a journal report covering at least two archive cycles from startup.
+  
+                              # Debug Report
+                              source ~/weewx-venv/bin/activate   
+                              weectl debug
+
+                              # Journal Report
+                              sudo journalctl -u weewx -f
+
+                             
