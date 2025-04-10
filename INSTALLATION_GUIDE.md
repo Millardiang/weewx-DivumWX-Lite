@@ -44,7 +44,7 @@ IMPORTANT. Installing PHP; please make sure you install all the PHP modules appr
 
 <p> Execute the following command to install commonly used PHP extensions:</p>
 
-<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y php8.4-curl php8.4-gd php8.4-mbstring php8.4-xml php8.4-zip</code></pre>
+<pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y php8.4-common php8.4-curl php8.4-gd php8.4-mbstring php8.4-xml php8.4-zip</code></pre>
 
 <p>We can use <code>-m</code> option to check what extensions are installed.</p>
 
@@ -62,7 +62,7 @@ IMPORTANT. Installing PHP; please make sure you install all the PHP modules appr
 
 <pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo apt install -y libapache2-mod-php8.4</code></pre>
 
-<p>Once installation was completed, restart Apache:</p>
+<p>Once installation is complete, restart Apache:</p>
 
 <pre class="highlighter"><code class="language-plaintext no-line-numbers">sudo service apache2 restart</code></pre>
 
